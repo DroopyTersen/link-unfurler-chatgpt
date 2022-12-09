@@ -1,0 +1,32 @@
+{
+  "name": "link-unfurler",
+  "version": "0.0.1",
+  "description": "Takes a URL (or HTML) and provides a title, description and image",
+  "main": "build/server.js",
+  "author": "Andrew Petersen",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:node": "nodemon build/server.js",
+    "dev:ts": "node tasks/watch.mjs",
+    "build": "node tasks/build.mjs",
+    "start": "node build/server.js"
+  },
+  "dependencies": {
+    "@extractus/article-extractor": "^7.2.8-rc1",
+    "@markdoc/markdoc": "^0.2.1",
+    "chatgpt": "^2.0.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "html-to-text": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.12",
+    "esbuild": "^0.16.3",
+    "esbuild-node-tsc": "^2.0.4",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.9.4"
+  }
+}
